@@ -1,0 +1,14 @@
+@charset "utf-8";
+@import "vars.scss";
+
+.xiongSingleArticle {
+  background: white;
+  opacity: 0.9;
+  padding: 25px;
+  position: relative;
+  margin-top: 50px;
+  .xiongOccupation{
+    font-size: 120%;
+    font-style: italic;
+  }
+}

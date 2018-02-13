@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import "vars.scss";
+
+.xiong-main-nav {
+  background: $white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 20vw;
+  font-family: $menufont;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 35px;
+  ul {
+    list-style: none;
+    padding-top: 50px;
+    padding-left: 0;
+    li {
+      padding-left: 0;
+      a {
+        color: $black;
+        text-decoration: none;
+        width: 100%;
+        display: block;
+        padding-left: 40px;
+      }
+      .active {
+        background: $grey;
+      }
+      &:hover {
+        background: $grey;
+        text-decoration: none;
+      }
+
+    }
+  }
+}
