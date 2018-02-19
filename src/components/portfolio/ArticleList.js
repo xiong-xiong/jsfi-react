@@ -1,6 +1,7 @@
 import React from 'react'
 import ArticleListItem from './ArticleListItem'
 import client from '../service/client'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 
 
@@ -22,12 +23,12 @@ export default class ArticleList extends React.Component {
     let articles = this.state.articles.map((article, i)=> <ArticleListItem id={i} key={i} article={article}/>)
 
     return (
-      <div className='xiong-container'>
+      <ReactCSSTransitionGroup className='xiong-container' component='div' transitionName='card' transitionEnterTimeout={1000} transitionLeaveTimeout={1000}>
 
 
           {articles}
 
-      </div>
+      </ReactCSSTransitionGroup>
     )
   }
 }

@@ -36,6 +36,11 @@ a:hover {
 .xiong-container {
   width: 70vw;
   margin-left: 25vw;
+  @media screen and (max-width: 900px){
+    width: 90vw;
+    margin-left: 0;
+    margin: 0 auto;
+  }
 }
 
 .xiong-block {

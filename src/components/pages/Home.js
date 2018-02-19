@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+
 
 
 class Home extends Component {
@@ -6,18 +8,17 @@ class Home extends Component {
 
   componentDidMount (){
     //JUHA.BLOG REQUEST
-      juhaBlogRequestFunc();
-      function juhaBlogRequestFunc() {
-        var juhaBlogRequest = new XMLHttpRequest();
 
-        juhaBlogRequest.open('GET', 'http://juha.blog/wp-json/wp/v2/posts?per_page=3');
+        let juhaBlogRequest = new XMLHttpRequest();
 
-        juhaBlogRequest.onload = function() {
-          console.log('this is where it stops for some reason')
+        juhaBlogRequest.open('GET', 'http://juha.blog/wp-json/wp/v2/posts');
+
+
+
           if (juhaBlogRequest.status >= 200 && juhaBlogRequest.status < 400) {
             let JBData = JSON.parse(juhaBlogRequest.responseText);
             console.log(JBData);
-              console.log('gre')
+
             createHTML(JBData);
 
           } else {
@@ -25,20 +26,21 @@ class Home extends Component {
           }
 
 
-        juhaBlogRequest.onerror = function() {
+        juhaBlogRequest.onerror = function errorlog() {
           console.log("Connection error");
         };
 
         juhaBlogRequest.send();
-      };
-    }
+
+
 
     function createHTML(postsJBData) {
+
       let juhaBlogHTMLString = '';
       let i = 0;
       for (i = 0; i < postsJBData.length; i++) {
-        juhaBlogHTMLString += '<a target="_blank" href="' + postsJBData[i].link + '"><div class="nostoblock linkkiblock">' +'<h3>' + postsJBData[i].title.rendered + '</h3><p class="blog-label"><i class="fa fa-wordpress"></i> Juha.Blog</p></div></a>';
-
+        juhaBlogHTMLString += postsJBData[i].title.rendered ;
+        console.log('jee')
       }
     }
 
@@ -50,19 +52,16 @@ class Home extends Component {
 
 
 
-
-
     return (
 
-      <div className='xiong-container'>
-
+      <ReactCSSTransitionGroup className='xiong-container' component='article' transitionName='card' transitionEnterTimeout={1000} transitionLeaveTimeout={1000} transitionAppear={true} transitionAppearTimeout={1000}>
         <div className='xiongSingleArticle'>
 
-          <h2>Home page</h2>
-          
+        <h2>Home page</h2>
+
 
         </div>
-      </div>
+      </ReactCSSTransitionGroup>
 
     );
   }

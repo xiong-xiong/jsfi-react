@@ -1,6 +1,7 @@
 import React from 'react'
 import client from '../service/client'
-import {Link} from 'react-router-dom'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+
 
 export default class Single extends React.Component {
   constructor() {
@@ -23,14 +24,14 @@ export default class Single extends React.Component {
 
       }
       return (
-        <article className='xiong-container'>
+        <ReactCSSTransitionGroup className='xiong-container' component='article' transitionName='card' transitionEnterTimeout={1000} transitionLeaveTimeout={1000} transitionAppear={true} transitionAppearTimeout={1000}>
 
-          <Link to={`/`} className='closeArticle'><i className='fa fa-close'></i></Link>
+
           <div className='xiongSingleArticle'>
 
             <h2>{this.state.article.fields.title}</h2>
             <p>{this.state.article.fields.content}</p>
-            
+
             <p className='xiongOccupation'>
             Occupation: {this.state.article.fields.occupation.fields.title}<span>, </span>
             {this.state.article.fields.occupation.fields.company}
@@ -38,7 +39,8 @@ export default class Single extends React.Component {
             </p>
 
           </div>
-        </article>
+          </ReactCSSTransitionGroup>
+
       )
     }
   }
