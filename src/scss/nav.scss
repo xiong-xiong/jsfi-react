@@ -1,20 +1,20 @@
 @charset "utf-8";
 @import "vars.scss";
 
+
 .xiong-main-nav {
   background: $white;
   position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
-  width: 20vw;
   font-family: $menufont;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 20px;
   line-height: 35px;
-  @media screen and (max-width: 900px) {
-    display: none;
+  z-index: 90;
+  overflow: hidden;
   }
   ul {
     list-style: none;
@@ -28,6 +28,9 @@
         width: 100%;
         display: block;
         padding-left: 40px;
+        @media screen and (max-width: $tabletBreakpoint) {
+          padding-left: 3vw;
+        }
       }
       .active {
         background: $grey;
@@ -39,4 +42,57 @@
 
     }
   }
+  .xiong-header {
+    padding: 25px;
+    .xiong-slogan {
+      text-transform: none;
+      font-style: italic;
+      font-size: 18px;
+    }
+    @media screen and (max-width: $tabletBreakpoint){
+      padding: 5px;
+    }
+  }
+
+
+.xiong-menuicon {
+  text-align: center !important;
+  font-size: 25px;
+  width: 30px;
+  height: 35px;
+  line-height: 35px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#xiong-openmenu, #xiong-closemenu {
+  font-size: 40px;
+  text-align: right;
+  padding: 10px 25px;
+  float: right;
+  cursor: pointer;
+}
+#xiong-openmenu {
+  &:hover {
+    color: green;
+  }
+}
+#xiong-closemenu {
+  &:hover {
+    color: red;
+  }
+}
+
+.xiong-expanded-nav-mask {
+  position: absolute;
+  left: 300px;
+  height: 100vh;
+  background: #000;
+  opacity: 0.2;
+  width: calc(100vw - 300px);
+  z-index: 90;
+}
+
+#smallNav ul{
+  margin-top: 65px;
 }

@@ -6,8 +6,9 @@ body {
   background: url('img/bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: fixed;
+  background-attachment: fixed;
   font-size: 16px;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4 {
@@ -16,31 +17,22 @@ h1, h2, h3, h4 {
   padding-top: 25px;
 }
 
+h2 {
+  font-size: 2.2rem;
+}
+
 a {
   color: $black;
 }
 a:hover {
   text-decoration: none;
 }
-.xiong-header {
-  padding: 25px;
-  .xiong-slogan {
-    text-transform: none;
-    font-style: italic;
-    font-size: 18px;
-  }
 
-
-}
 
 .xiong-container {
-  width: 70vw;
-  margin-left: 25vw;
-  @media screen and (max-width: 900px){
-    width: 90vw;
-    margin-left: 0;
-    margin: 0 auto;
-  }
+  width: calc(95% - 90px);
+  margin-left: 100px;
+
 }
 
 .xiong-block {
