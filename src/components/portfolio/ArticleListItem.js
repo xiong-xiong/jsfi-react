@@ -12,7 +12,7 @@ class ArticleListItem extends React.Component {
 
               <div className='xiong-block-post'>
                 <span className='xiong-type-tag'>Portfolio</span>
-                <h2>{article.fields.title}</h2>
+                <h3>{article.fields.title}</h3>
                 <p>{article.fields.endDate}</p>
 
               </div>

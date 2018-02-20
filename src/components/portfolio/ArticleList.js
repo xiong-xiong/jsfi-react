@@ -24,7 +24,9 @@ export default class ArticleList extends React.Component {
 
     return (
       <ReactCSSTransitionGroup className='xiong-container' component='div' transitionName='card' transitionEnterTimeout={1000} transitionLeaveTimeout={1000}>
-
+        <div className='xiong-headline-banner'>
+          <h2>Portfolio</h2>
+        </div>
 
           {articles}
 

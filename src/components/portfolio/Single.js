@@ -20,16 +20,18 @@ export default class Single extends React.Component {
     render () {
 
       if (!this.state.article){
-        return <h1>Loading..</h1>
+        return <h1>...</h1>
 
       }
       return (
         <ReactCSSTransitionGroup className='xiong-container' component='article' transitionName='card' transitionEnterTimeout={1000} transitionLeaveTimeout={1000} transitionAppear={true} transitionAppearTimeout={1000}>
 
-
+        <div className='xiong-headline-banner'>
+          <h2>{this.state.article.fields.title}</h2>
+        </div>
           <div className='xiongSingleArticle'>
 
-            <h2>{this.state.article.fields.title}</h2>
+
             <p>{this.state.article.fields.content}</p>
 
             <p className='xiongOccupation'>

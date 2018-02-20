@@ -55,9 +55,12 @@ class Home extends Component {
     return (
 
       <ReactCSSTransitionGroup className='xiong-container' component='article' transitionName='card' transitionEnterTimeout={1000} transitionLeaveTimeout={1000} transitionAppear={true} transitionAppearTimeout={1000}>
+      <div className='xiong-headline-banner'>
+        <h2>Home page</h2>
+      </div>
         <div className='xiongSingleArticle'>
 
-        <h2>Home page</h2>
+
 
 
         </div>
