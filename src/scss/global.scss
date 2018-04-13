@@ -50,6 +50,15 @@ a:hover {
     }
   }
 }
+.cv-block {
+  min-height: 330px;
+  ul {
+    padding-top: 10px;
+  }
+  &:hover {
+    opacity: 0.9 !important;
+  }
+}
 
 .xiong-type-tag {
   position: absolute;

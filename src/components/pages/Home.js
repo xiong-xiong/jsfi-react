@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
+import HeadlineBanner from '../HeadlineBanner';
 
 
 class Home extends Component {
@@ -55,9 +56,7 @@ class Home extends Component {
     return (
 
       <ReactCSSTransitionGroup className='xiong-container' component='article' transitionName='card' transitionEnterTimeout={1000} transitionLeaveTimeout={1000} transitionAppear={true} transitionAppearTimeout={1000}>
-      <div className='xiong-headline-banner'>
-        <h2>Home page</h2>
-      </div>
+      <HeadlineBanner headline="Home" />
         <div className='xiongSingleArticle'>
 
 

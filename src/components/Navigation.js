@@ -46,7 +46,7 @@ class Navigation extends Component {
                 <li><NavLink exact to='/'>Home</NavLink></li>
                 <li><NavLink to='/cv'>Cv</NavLink></li>
                 <li><NavLink to='/portfolio'>Portfolio</NavLink></li>
-                <li><NavLink to='/dev'>Dev</NavLink></li>
+                {/*<li><NavLink to='/dev'>Dev</NavLink></li>*/}
                 <li><a href="http://juha.blog" target="_blank" rel="noopener noreferrer">Juha.blog</a></li>
                 <li><a href="http://reseptit.blog" target="_blank" rel="noopener noreferrer">Reseptit.blog</a></li>
               </ul>
@@ -71,7 +71,7 @@ class Navigation extends Component {
             <li><NavLink exact to='/'><i className='fa fa-home xiong-menuicon'></i></NavLink></li>
             <li><NavLink to='/cv'> <i className='fa fa-user xiong-menuicon'></i></NavLink></li>
             <li><NavLink to='/portfolio'><i className='fa fa-folder-open xiong-menuicon'></i> </NavLink></li>
-            <li><NavLink to='/dev'><i className='fa fa-code xiong-menuicon'></i> </NavLink></li>
+            {/*<li><NavLink to='/dev'><i className='fa fa-code xiong-menuicon'></i> </NavLink></li>*/}
             <li><a href="http://juha.blog" target="_blank" rel="noopener noreferrer"><i className='fa fa-pencil-square xiong-menuicon'></i> </a></li>
             <li><a href="http://reseptit.blog" target="_blank" rel="noopener noreferrer"><i className='fa fa-cutlery xiong-menuicon'></i> </a></li>
           </ul>
