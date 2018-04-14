@@ -54,10 +54,19 @@ a:hover {
   min-height: 330px;
   ul {
     padding-top: 10px;
+    
   }
   &:hover {
     opacity: 0.9 !important;
   }
+}
+
+.frontpage-block {
+  min-height: 300px;
+  
+}
+.frontpageCol {
+  padding: 0;
 }
 
 .xiong-type-tag {
